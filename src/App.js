@@ -26,7 +26,8 @@ function App() {
             divider: { main: "#FFED8A"},
             background: {
               default: "#F5F5F5",
-              paper: "#D6AD60",
+              // paper: "#D6AD60",
+              paper: "#F5F5F5",
             },
             text: {
               primary: '#122620',
@@ -55,7 +56,7 @@ function App() {
   return (
     
       // <div className="App">
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme} mode={cmode}>
           
             <Navbar setMode = {setCMode} mode = {cmode}/>
             <div style={{paddingTop: '64px'}}></div>
@@ -72,6 +73,7 @@ function App() {
             />
             <Router>
               <Routes>
+              
                 <Route path='/' Component={Home} exact/>
               </Routes>
             </Router>

@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import headerImg from "../Assets/img/pic.jpg";
 import TrackVisibility from 'react-on-screen';
@@ -53,12 +53,12 @@ function Hero() {
         {/* <Typography variant="h1">
             Hello world
         </Typography> */}
-        <Container className="banner" id="home">
-            <Grid2 container spacing={2} sx={{height: "70vh",display: "flex", alignItems: "center"}}>
-                <Grid2 xs={12} md={7}>
+        <Container className="banner" id="home" sx={{minHeight: "950px"}}>
+            <Grid container spacing={2} sx={{height: "70vh",display: "flex", alignItems: "center"}}>
+                <Grid xs={12} md={7}>
                     <TrackVisibility>
                         {({ isVisible }) =>
-                        <Box className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                        <Box>
                             <Typography color="secondary" variant="h5">Welcome to my Portfolio</Typography>
                             <Typography variant="h2">{`My name is `}
                             <Typography color='secondary' component="span" variant="h2">
@@ -74,19 +74,20 @@ function Hero() {
                                     </span>
                                 </span>
                             </Typography>
-                            <Typography variant="subtitle2">
+                            <Typography variant="subtitle2" sx={{paddingTop:"5%"}}>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                             </Typography>
                                 
                         </Box>
                         }
                     </TrackVisibility>
-                </Grid2>
-                <Grid2 xs={12} md={5} sx={{display: 'flex', justifyContent: 'center'}}>
+                </Grid>
+                <Grid xs={12} md={5} sx={{display: 'flex', justifyContent: 'center'}}>
                     <TrackVisibility>
                     {
                         ({ isVisible }) =>
-                            <Box className={isVisible ? "animate__animated animate__zoomIn" : ""} sx={{paddingTop: "20%"}}>
+                            <Box sx={{paddingTop: "20%"}}>
+                            
                                 <img className="HeroPic" width={400} src={headerImg} alt="Header Img"
                                     style=
                                     {{
@@ -99,8 +100,8 @@ function Hero() {
                                 
                     }
                     </TrackVisibility>
-                </Grid2>
-            </Grid2>
+                </Grid>
+            </Grid>
         </Container>
     </>
     );
