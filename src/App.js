@@ -8,13 +8,12 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {ThemeProvider, createTheme } from '@mui/material';
 
-import { amber, grey, deepOrange,  } from "@mui/material/colors";
 import Home from './Pages';
 import Navbar from './Components/Navbar';
 import ParticlesBg from 'particles-bg'
-import Hero from './Components/Hero';
 function App() { 
-  const [cmode, setCMode] = useState("light");  
+  const [cmode, setCMode] = useState("light");
+  
   const theme = createTheme({
     palette: {
       cmode,
@@ -32,7 +31,7 @@ function App() {
             text: {
               primary: '#122620',
               secondary: "#D6AD60",
-              third: '#FFED8A'
+              third: '#A18248'
             },
           }
         : {
@@ -59,18 +58,34 @@ function App() {
         <ThemeProvider theme={theme} mode={cmode}>
           
             <Navbar setMode = {setCMode} mode = {cmode}/>
-            <div style={{paddingTop: '64px'}}></div>
-            <ParticlesBg type="cobweb" bg={true}  
-              color= 
-              {
-                cmode === 'light'
-                ?
-                "#D6AD60"
-                :
-                "#66FCF1"
-              } 
-              num={150}
-            />
+            <div style={{paddingTop: '90px'}}></div>
+            {window.innerWidth > 750 
+              ? 
+              <ParticlesBg type="cobweb" bg={true}  
+                  color= 
+                  {
+                    cmode === 'light'
+                    ?
+                    "#D6AD60"
+                    :
+                    "#66FCF1"
+                  } 
+                  num={80}
+              />
+              
+              :
+              <ParticlesBg type="cobweb" bg={true}  
+                  color= 
+                  {
+                    cmode === 'light'
+                    ?
+                    "#D6AD60"
+                    :
+                    "#66FCF1"
+                  } 
+                  num={50}
+              />
+            }
             <Router>
               <Routes>
               

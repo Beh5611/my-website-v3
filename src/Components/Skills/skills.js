@@ -3,7 +3,7 @@ export let languages = [
         id: 1,
         name: 'Python',
         skill: 'proficient',
-        img: require('../Assets/languages/python.png')
+        img: require('../Assets/languages/python.jpg')
     },
     {
         id: 2,
@@ -14,13 +14,13 @@ export let languages = [
     {
         id: 3,
         name: 'Java',
-        skill: 'proficient',
+        skill: 'intermediate',
         img: require('../Assets/languages/java.png')
     },
     {
         id: 4,
         name: 'JavaScript',
-        skill: 'intermediate',
+        skill: 'proficient',
         img: require('../Assets/languages/js.png')
     },
     {
@@ -32,56 +32,63 @@ export let languages = [
     {
         id: 6,
         name: 'CSS',
-        skill: 'intermediate',
+        skill: 'proficient',
         img: require('../Assets/languages/css.png')
     }
 ]
 // frameworks, libraries and databases
 export let frameworks = [
+    
     {
         id: 1,
-        name: 'Bootstrap',
-        skill: 'novice',
-        img: require('../Assets/languages/bootstrap.png')
-    },
-    {
-        id: 2,
         name: 'React',
-        skill: 'novice',
+        skill: 'advance',
         img: require('../Assets/languages/react.png')
     },
     {
+        id: 2,
+        name: 'Pandas',
+        skill: 'intermediate',
+        img: require('../Assets/languages/pandas.png')
+    },
+    {
         id: 3,
-        name: 'JavaFX',
-        skill: 'beginner',
-        img: require('../Assets/languages/javafx.png')
+        name: 'ScikitLearn',
+        skill: 'intermediate',
+        img: require('../Assets/languages/scikit.png')
     },
     {
         id: 4,
-        name: 'NodeJS',
-        skill: 'beginner',
-        img: require('../Assets/languages/nodejs.png')
+        name: 'TenserFlow',
+        skill: 'begginer',
+        img: require('../Assets/languages/tf.png')
     },
     {
         id: 5,
-        name: 'Git',
+        name: 'Django',
         skill: 'intermediate',
-        img: require('../Assets/languages/git.png')
+        img: require('../Assets/languages/django.png')
     },
     {
         id: 6,
-        name: 'Django',
+        name: 'Flask',
         skill: 'begginer',
-        img: require('../Assets/languages/django.jpg')
+        img: require('../Assets/languages/flask.png')
     },
     {
         id: 7,
+        name: 'NodeJS',
+        skill: 'beginner',
+        img: require('../Assets/languages/node.png')
+    },
+    {
+        id: 8,
         name: 'Express',
         skill: 'begginer',
         img: require('../Assets/languages/express.png')
     },
     {
-        id: 8,
+        id: 9,
         name: 'PostgreSQL',
         skill: 'begginer',
         img: require('../Assets/languages/postgre.png')
@@ -90,40 +97,54 @@ export let frameworks = [
 
 
 export let tools = [
+    
     {
         id: 1,
         name: 'Git',
         skill: 'intermediate',
-        img: ''
+        img: require('../Assets/languages/git.png')
     },
     {
         id: 2,
-        name: 'React',
+        name: 'VSCode',
         skill: 'intermediate',
-        img: ''
+        img: require('../Assets/languages/vs.jpg')
     },
     {
         id: 3,
-        name: 'JavaFX',
-        skill: 'novice',
-        img: ''
+        name: 'Jupyter',
+        skill: 'intermediate',
+        img: require('../Assets/languages/jupyter.png')
     },
     {
         id: 4,
-        name: 'NodeJS',
-        skill: 'novice',
-        img: ''
+        name: 'Unix',
+        skill: 'intermediate',
+        img: require('../Assets/languages/unix.jpg')
     },
     {
         id: 5,
-        name: 'HTML',
-        skill: 'proficient',
-        img: ''
+        name: 'Bootstrap',
+        skill: 'intermediate',
+        img: require('../Assets/languages/bootstrap.png')
     },
     {
         id: 6,
-        name: 'CSS',
-        skill: 'proficient',
-        img: ''
-    }
+        name: 'MUI',
+        skill: 'intermediate',
+        img: require('../Assets/languages/mui.png')
+    },
+    {
+        id: 7,
+        name: 'Firebase',
+        skill: 'novice',
+        img: require('../Assets/languages/fb.png')
+    },
+    {
+        id: 8,
+        name: 'AWS',
+        skill: 'novice',
+        img: require('../Assets/languages/aws.png')
+    },
+    
 ]
