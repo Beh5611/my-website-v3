@@ -6,72 +6,69 @@ import { useState } from "react";
 function Skills() {
     const [section, setSection] = useState('Languages');
     
+    
     let skillHandler = () => {
         if (section === 'Languages'){
             return (
-                <Box sx={{display: "flex", justifyContent : "center"}}>
-                    <Grid container justifyContent="center" alignItems="center" spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 4, md: 12 }} sx={{display:"flex", justifyContent:"center"}}>
-        
+                <Box sx={{display: "grid", justifyContent : "center", alignItems: 'center', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', }}>
+                    
                         {languages.map((language, i) => {
                             return (
-                            <Grid item xs={1} sm={2} md={3} key={i}>
-                                <SkillCard
+                                
+                                <SkillCard sx={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                                     key = {i} 
                                     id ={language.id} 
                                     name = {language.name} 
                                     skill= {language.skill}
                                     img = {language.img}
                                 />
-                            </Grid>
                             );
                         })}
-                    </Grid>
+                    
                 </Box>
+    
             )
         } else if (section === 'Libraries'){
             return (
-                <Box sx={{display: "flex", justifyContent : "center"}}>
-                    <Grid container justifyContent="center" alignItems="center" spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 4, md: 12 }} sx={{display:"flex", justifyContent:"center"}}>
-        
+                <Box sx={{display: "grid", justifyContent : "center", alignItems: 'center', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', }}>
+                    
                         {frameworks.map((language, i) => {
                             return (
-                            <Grid item xs={1} sm={2} md={3} key={i}>
-                                <SkillCard
+                                
+                                <SkillCard sx={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                                     key = {i} 
                                     id ={language.id} 
                                     name = {language.name} 
                                     skill= {language.skill}
                                     img = {language.img}
                                 />
-                            </Grid>
                             );
                         })}
-                    </Grid>
+                    
                 </Box>
             )
         } else if (section === 'Tools'){
             return (
-                <Box sx={{display: "flex", justifyContent : "center"}}>
-                    <Grid container justifyContent="center" alignItems="center" spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 4, md: 12 }} sx={{display:"flex", justifyContent:"center"}}>
-        
+                <Box sx={{display: "grid", justifyContent : "center", alignItems: 'center', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', }}>
+                    
                         {tools.map((language, i) => {
                             return (
-                            <Grid item xs={1} sm={2} md={3} key={i}>
-                                <SkillCard
+                                
+                                <SkillCard sx={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                                     key = {i} 
                                     id ={language.id} 
                                     name = {language.name} 
                                     skill= {language.skill}
                                     img = {language.img}
                                 />
-                            </Grid>
                             );
                         })}
-                    </Grid>
+                    
                 </Box>
             )
         }
     }
+    
     
     return (
         <Container sx={{margin: ""}}> 
