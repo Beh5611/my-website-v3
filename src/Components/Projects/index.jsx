@@ -14,21 +14,21 @@ function Projects() {
         slidesToScroll: 1
       };
     return ( 
-        <Container sx={{display: "flex", justifyContent : "center", marginBottom:"40px", marginTop: '150px',textAlign: 'center'}}>
+        <Container sx={{display: "flex", justifyContent : "center", marginBottom:"40px", marginTop: '150px',textAlign: 'center'}} maxWidth='xl'>
             <Stack>
                 <Typography variant="h3" color='text.secondary' sx={{marginBottom:"40px"}}>
                     Projects
                 </Typography>
                 <Box sx={{
-                    display: "grid",
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                    gap: '1rem',
-                    justifyContent : "center",
-                    textAlign: 'center'
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    minWidth: '280px'
                 }}> 
                     {portfolio.map((project) => {
                         return (
-                        <Card sx={{width: '350px', display: "grid", justifyContent : "center", alignItems: 'center', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem'}} elevation={4}>
+                        <Card sx={{width: '350px', margin: '20px'}} elevation={4}>
                             <CardContent sx={{backgroundColor: 'white', height: '250px'}}>
                                 <Slider {...settings}>
                                     {project.img.map((imgLink) => {
@@ -69,7 +69,7 @@ function Projects() {
                                             project.demo
                                             &&
                                             <Grid>
-                                                <Button sx={{color: 'text.primary'}}>
+                                                <Button sx={{color: 'text.primary'}} href={project.demolink}>
                                                     demo
                                                 </Button>
                                             </Grid>
