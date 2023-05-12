@@ -71,7 +71,10 @@ function Skills() {
     
     
     return (
-        <Container sx={{margin: ""}}> 
+        <Container sx={{
+            "@media (max-width: 500px)": {
+                paddingTop: "100px", // Set a larger bottom padding below 500px
+          },}}> 
             
             <Paper elevation={2} sx={{minHeight: "400px", padding: "30px"}}>
                 <Stack>
@@ -80,7 +83,7 @@ function Skills() {
                         <Stack>
                             <Typography variant="h3" 
                             color={section === 'Languages' ? 'text.secondary' : 'text.primary'}
-                            sx={{'&:hover': {
+                            sx={{cursor: 'pointer', '&:hover': {
                                 color: 'text.third'
                                 
                             }}}
@@ -91,7 +94,7 @@ function Skills() {
                             
                             <Typography variant="h3" 
                             color={section === 'Libraries' ? 'text.secondary' : 'text.primary'}
-                            sx={{'&:hover': {
+                            sx={{cursor: 'pointer','&:hover': {
                                 color: 'text.third'
                                 
                             }}}
@@ -102,7 +105,7 @@ function Skills() {
                             
                             <Typography variant="h3" 
                             color={section === 'Tools' ? 'text.secondary' : 'text.primary'}
-                            sx={{'&:hover': {
+                            sx={{cursor: 'pointer','&:hover': {
                                 color: 'text.third'
                                 
                             }}}

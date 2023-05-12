@@ -93,7 +93,7 @@ function Hero() {
                                     {{
                                         animation: "updown 3s linear infinite", 
                                         borderRadius: "50px 10px 50px 10px",
-                                        boxShadow: "4px 4px 4px #888888"
+                                        boxShadow: "4px 4px 4px #888888"  
                                     }}
                                 />
                             </Box>
