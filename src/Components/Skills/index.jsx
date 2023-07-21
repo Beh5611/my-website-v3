@@ -71,10 +71,13 @@ function Skills() {
     
     
     return (
-        <Container sx={{
-            "@media (max-width: 500px)": {
-                paddingTop: "100px", // Set a larger bottom padding below 500px
-          },}}> 
+        <Container id='Skills' 
+            sx={{
+                "@media (max-width: 500px)": {
+                    paddingTop: "100px", // Set a larger bottom padding below 500px
+                },
+            }}
+            > 
             
             <Paper elevation={2} sx={{minHeight: "400px", padding: "30px"}}>
                 <Stack>

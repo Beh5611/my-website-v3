@@ -6,9 +6,9 @@ export const portfolio = [
       "A social media for creating, sharing, and interacting with Recipes. Users comment on other people's recipes, like/favorite a recipe, create their own recipes and add a list of recipes and their ingredients to their 'shopping cart'",
     lessons:
       "Displayed proficiency with Gitflow/branching, database design as well as RESTful APIs, token authentication, serialization, and overall Django mastery.",
-    img: [require('../Assets/languages/python.jpg'), require('../Assets/languages/c.png'), require('../Assets/languages/java.png')],
+    img: [require('../Assets/projects/EC1.jpg'), require('../Assets/projects/EC2.jpg'), require('../Assets/projects/EC3.jpg'), require('../Assets/projects/EC4.jpg')],
     github: true,
-    githublink: "https://github.com/Beh5611/MyWebsite",
+    githublink: "https://github.com/Beh5611/EasyChef",
     demo: false,
     demolink : ''
   },
@@ -19,9 +19,9 @@ export const portfolio = [
       "Therapy Match is a web application that connects users with therapists based on their unique needs and preferences. Users input their location and describe their situation, TherapyMatch does the rest.",
     lessons:
       "Utilized the OpenAI GPT-3.5 model to analyze user input and identify key points related to their mental health needs. Implemented custom algorithms to match users with therapists based on their specialties and proximity, using OpenStreetMap API.",
-    img: [require('../Assets/languages/python.jpg'), require('../Assets/languages/c.png'), require('../Assets/languages/java.png')],
+    img: [require('../Assets/projects/TM1.jpg'), require('../Assets/projects/TM2.jpg'), require('../Assets/projects/TM3.jpg')],
     github: true,
-    githublink: "https://github.com/Beh5611/MyWebsite",
+    githublink: "https://github.com/Beh5611/TherapyMatch",
     demo: true,
     demolink : 'https://drive.google.com/file/d/1PYQu6tWsaNdNtX28vP6peb9GaQ9b-iPM/view'
   },
@@ -34,7 +34,7 @@ export const portfolio = [
       "This project was an opportunity for me to combine my front-end and back-end knowledge to create my first full-stack application as well as making use of an API!l",
     img: [require('../Assets/projects/api.jpg')],
     github: true,
-    githublink: "https://github.com/Beh5611/MyWebsite",
+    githublink: "https://github.com/Beh5611/Facial-Recognition-frontend",
     demo: false,
     demolink : ''
   },

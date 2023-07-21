@@ -8,9 +8,9 @@ function Home({mode}) {
     
     return (
         <>
-            <Hero />
-            <Skills />
-            <Projects />
+            <Hero title='About' id='About'/>
+            <Skills title='Skills' id='Skills'/>
+            <Projects title='Projects' id='Projects'/>
         </>
     );
 }

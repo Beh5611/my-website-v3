@@ -14,6 +14,9 @@ import {ThemeProvider, createTheme } from '@mui/material';
 import Home from './Pages';
 import Navbar from './Components/Navbar';
 import ParticlesBg from 'particles-bg'
+import Hero from './Components/Hero';
+import Skills from './Components/Skills';
+import Projects from './Components/Projects';
 function App() { 
   const [cmode, setCMode] = useState("light");
   
@@ -25,6 +28,7 @@ function App() {
             // palette values for light mode
             primary:{ main: "#F5F5F5"},
             secondary: {main: "#D6AD60"},
+            tertiary: {main: "#122620"},
             divider: { main: "#FFED8A"},
             background: {
               default: "#F5F5F5",
@@ -41,6 +45,7 @@ function App() {
             // palette values for dark mode
             primary:{ main: "#0B0C10"},
             secondary: {main: "#66FCF1"},
+            tertiary: {main: "#ffffff"},
             divider: { main: "#1F2833"},
             background: {
               default: "#0B0C10",
@@ -89,12 +94,10 @@ function App() {
                   num={50}
               />
             }
-            <Router>
-              <Routes>
-              
-                <Route path='/' Component={Home} exact/>
-              </Routes>
-            </Router>
+            
+            <Hero />
+            <Skills />
+            <Projects />
             
             
           

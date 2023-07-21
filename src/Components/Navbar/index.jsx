@@ -15,6 +15,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import MaterialUISwitch from '../ThemeButton';
+import { useEffect } from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const drawerWidth = 240;
 const navItems = ['About', 'Skills', 'Projects'];
@@ -40,7 +42,17 @@ function DrawerAppBar(props) {
                 {navItems.map((item) => (
                 <ListItem key={item} disablePadding>
                     <ListItemButton sx={{ textAlign: 'center' }} href={`#${item}`}>
-                        <ListItemText primary={item} />
+                        <Link style={{textAlign: 'center', width: '100%'}}
+                            activeClass="active"
+                            to={item}
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            <ListItemText primary={item}/>
+                        </Link>
+                        
                     </ListItemButton>
                 </ListItem>
                 ))}
@@ -102,17 +114,26 @@ function DrawerAppBar(props) {
                 </Typography>
                 <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {navItems.map((item) => (
-                    <Button className="navButton" key={item} href={`#${item}`} disableRipple>
-                        
-                        <Typography color="text.primary"  variant="body1" 
-                            sx={{'&:hover': {
-                                color: 'text.secondary',
-                                borderBottom: '2px',
-                                borderBottomColor: 'text.primary',
-                                
-                            }}}>
-                            {item}
-                        </Typography>
+                    <Button className="navButton" key={item} disableRipple>
+                        <Link
+                            activeClass="active"
+                            to={item}
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            <Typography color="text.primary"  variant="body1" 
+                                sx={{'&:hover': {
+                                    color: 'text.secondary',
+                                    borderBottom: '2px',
+                                    borderBottomColor: 'text.primary',
+                                    
+                                }}}>
+                                {item}
+                            </Typography>
+                        </Link>
+
                     </Button>
                     ))}
                     {

@@ -1,9 +1,14 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
+import {FileSaver, saveAs} from 'file-saver';
 import headerImg from "../Assets/img/pic.jpg";
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
-import Grid2 from '@mui/material/Unstable_Grid2'; 
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import DownloadIcon from '@mui/icons-material/Download';
+
+
 function Hero() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -13,7 +18,12 @@ function Hero() {
     const toRotate = [ "FullStack Developer", "CS Student", "ML Engineer" ];
     const period = 2000;
     
-
+    const saveFile = () => {
+        saveAs(
+          "/Resume.pdf",
+          "MyCV.pdf"
+        );
+      };
     useEffect(() => {
         let ticker = setInterval(() => {
         tick();
@@ -53,7 +63,7 @@ function Hero() {
         {/* <Typography variant="h1">
             Hello world
         </Typography> */}
-        <Container className="banner" id="home" sx={{minHeight: "950px"}}>
+        <Container id='About'  className="banner"  sx={{minHeight: "950px"}}>
             <Grid container spacing={2} sx={{height: "70vh",display: "flex", alignItems: "center"}}>
                 <Grid xs={12} md={7}>
                     <TrackVisibility>
@@ -75,8 +85,15 @@ function Hero() {
                                 </span>
                             </Typography>
                             <Typography variant="subtitle2" sx={{paddingTop:"5%"}}>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                My problem solving skills, as well as desire for self-improvement are what set me apart.
                             </Typography>
+                            <Box sx={{display: 'flex', alignItems: 'center', paddingTop: '25px'}}>
+                                <a href="https://www.linkedin.com/in/behrouz-akhbari-9b8731183/" style={{paddingRight: '10px', paddingTop: '3px'}}><LinkedInIcon color="tertiary" /></a>
+                                <a href="https://github.com/beh5611/" style={{paddingRight: '10px', paddingTop: '3px'}}><GitHubIcon color="tertiary" /></a>
+                                
+                                <Button variant="outlined" color="tertiary" sx={{borderRadius: '30px'}} onClick={saveFile}>Resume <DownloadIcon /></Button>
+                            </Box>
+                            
                                 
                         </Box>
                         }
