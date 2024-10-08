@@ -25,32 +25,32 @@ export const portfolio = [
     demo: true,
     demolink : 'https://drive.google.com/file/d/1PYQu6tWsaNdNtX28vP6peb9GaQ9b-iPM/view'
   },
-  {
-    id: 3,
-    headline: 'Face Recognition API',
-    description:
-      "A full-stack app made with Node/Express and React.js. Used ClarifAI API to detect a face from the user's input. The backend consists of a list of users and is capable of Registering and Signing in valid users into the web app.",
-    lessons:
-      "This project was an opportunity for me to combine my front-end and back-end knowledge to create my first full-stack application as well as making use of an API!l",
-    img: [require('../Assets/projects/api.jpg')],
-    github: true,
-    githublink: "https://github.com/Beh5611/Facial-Recognition-frontend",
-    demo: false,
-    demolink : ''
-  },
-  {
-    id: 4,
-    headline: 'Shell Replica in C',
-    description:
-      "A fully functional mock shell built almost entirely from scratch. Some of the more advanced functionalities of this project include background processing, pipes and network support.",
-    lessons:
-      "This was a semester-long project that tested my knowledge on many important C/Unix topics such as data structures, file I/O, processing (forking), pipes, signalling, signal handling and sockets.",
-    img: [require('../Assets/projects/mysh.PNG')],
-    github: false,
-    githublink: "",
-    demo: false,
-    demolink : ''
-  },
+  // {
+  //   id: 3,
+  //   headline: 'Face Recognition API',
+  //   description:
+  //     "A full-stack app made with Node/Express and React.js. Used ClarifAI API to detect a face from the user's input. The backend consists of a list of users and is capable of Registering and Signing in valid users into the web app.",
+  //   lessons:
+  //     "This project was an opportunity for me to combine my front-end and back-end knowledge to create my first full-stack application as well as making use of an API!l",
+  //   img: [require('../Assets/projects/api.jpg')],
+  //   github: true,
+  //   githublink: "https://github.com/Beh5611/Facial-Recognition-frontend",
+  //   demo: false,
+  //   demolink : ''
+  // },
+  // {
+  //   id: 4,
+  //   headline: 'Shell Replica in C',
+  //   description:
+  //     "A fully functional mock shell built almost entirely from scratch. Some of the more advanced functionalities of this project include background processing, pipes and network support.",
+  //   lessons:
+  //     "This was a semester-long project that tested my knowledge on many important C/Unix topics such as data structures, file I/O, processing (forking), pipes, signalling, signal handling and sockets.",
+  //   img: [require('../Assets/projects/mysh.PNG')],
+  //   github: false,
+  //   githublink: "",
+  //   demo: false,
+  //   demolink : ''
+  // },
   {
     id: 5,
     headline: 'Three Musketeers',

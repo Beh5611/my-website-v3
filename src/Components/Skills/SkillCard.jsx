@@ -9,7 +9,7 @@ function SkillCard({img, name, skill}) {
         <Card 
             sx={{ 
                 width: "150px",
-                height:"200px",
+                height:"180px",
                 transition: 'all 0.3s', // Add transition for smooth effect
                     '&:hover': {
                     transform: 'scale(1.08)', // Slightly increase size on hover
@@ -28,9 +28,9 @@ function SkillCard({img, name, skill}) {
                     <Typography gutterBottom variant="h5" component="div">
                     {name}
                     </Typography>
-                    <Typography variant="body2">
+                    {/* <Typography variant="body2">
                         {skill}
-                    </Typography>
+                    </Typography> */}
                 </Stack>
             </CardContent>
             
